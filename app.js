@@ -210,7 +210,7 @@ trainBtn.addEventListener('click', async () => {
         
         const history = await model.fit(trainNoisy, trainClean, {
             batchSize: 128,
-            epochs: 15,
+            epochs: 1,
             validationData: [valNoisy, valClean],
             shuffle: true,
             callbacks: callbacks,
@@ -394,3 +394,4 @@ resetBtn.addEventListener('click', resetAll);
 // Initial setup
 buildDenoisingAutoencoder('max');
 log('Denoising Autoencoder ready. Load MNIST data and start training!');
+
